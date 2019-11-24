@@ -23,6 +23,7 @@ class CreateVoituresTable extends Migration
             $table->boolean('automatique');
             $table->boolean('climatisation');
             $table->text('plus_details');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -6,11 +6,16 @@
 	/**
 	 * 
 	 */
-	class Voiture extends Model
+	class Voitures extends Model
 	{
 		protected $table = "voitures";
 
-		protected $fillable = ["id", "marque", "designation", "nbr_portiere", "nbr_siege", "nbr_place_bagage", "automatique", "climatisation", "plus_details"];
+		protected $fillable = ["id", "marque", "designation", "nbr_portiere", "nbr_siege", "nbr_place_bagage", "automatique", "climatisation", "plus_details", "image"];
+
+		public function getImage()
+	    {
+	    	return $this->image;
+	    }
 		
 	}
 

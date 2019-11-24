@@ -11,6 +11,7 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-toggle.min.css') }}">
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         html, body {
@@ -23,7 +24,7 @@
         }
 
         .full-height {
-            height: 20vh;
+            height: 15vh;
         }
 
         .flex-center {
@@ -100,6 +101,8 @@
 
 	 <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/bootstrap.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
 </body>
 </html>

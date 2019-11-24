@@ -48,6 +48,11 @@ Route::get(
 	}
 )->name('dashboard');
 
+Route::post(
+	'/createVoiture',
+	'VoituresController@CreateVoiture'
+)->name('createVoiture');
+
 /*Route::post('/connexion/verify', 'UtilisateursController@ConnexionVerify');
 
 Route::get(
