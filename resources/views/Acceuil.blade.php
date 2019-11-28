@@ -7,7 +7,7 @@
     <title>locauto</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
@@ -70,7 +70,7 @@
     <div class="flex-center position-ref full-height">
         @if (Route::has('connexion'))
             <div class="top-right links">
-				<a href="">ACCEUIL</a>
+				<a href="{{ route('acceuil') }}">ACCEUIL</a>
                 @auth
                     <a href="{{ route('dashboard') }}">DASHBOARD</a>
                     <a id="" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -90,7 +90,7 @@
             </div>
         @endif
     </div>
-
+    
 	 <main class="py-4">
         @yield('content')
     </main>
@@ -104,5 +104,8 @@
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
+
+    <!--script src="{{ asset('js/bootstrap-toggle.min.js') }}"></script-->
+
 </body>
 </html>

@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*
+    * Obtenir les voitures d'un user
+    */
+    public function voitures()
+    {
+        return $this->hasMany('App\Models\Voitures', 'user_id');
+    }
 }

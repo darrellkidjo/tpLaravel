@@ -24,7 +24,12 @@ class CreateVoituresTable extends Migration
             $table->boolean('climatisation');
             $table->text('plus_details');
             $table->string('image');
+            $table->Integer('user_id')->nullable();
             $table->timestamps();
+            /*$table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade');*/
         });
     }
 

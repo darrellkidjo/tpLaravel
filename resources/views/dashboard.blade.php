@@ -7,9 +7,7 @@
 				@if (auth()->user()->is_admin == 1)
 					@include('admin')
 				@else
-					<div class="panel-heading">
-						Normal user
-					</div>
+					@include('client')
 				@endif
 			</div>
 		</div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use App\Models\Voitures;
 
 class HomeController extends Controller
 {
@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Acceuil');
+        $voitures = Voitures::all();
+        return view('listeVoiture', compact('voitures'));
     }
 
     public function admin()
@@ -36,5 +37,10 @@ class HomeController extends Controller
     {
         $request->session()->flush();
         return Redirect::route('acceuil');
+    }
+    function AllVoitureAcceuil(Request $request)
+    {
+        
+        return view('listeVoiture', compact('voitures'));
     }
 }
